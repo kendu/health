@@ -1,0 +1,9 @@
+{
+    "name": "kendu/health-check",
+    "description": "Project health check",
+    "authors": {
+        "name": "Kendu",
+        "email": "team@kendu.si"
+    },
+    "minimum-stability": "dev"
+}
