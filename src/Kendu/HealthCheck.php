@@ -18,12 +18,6 @@ class HealthCheck
     public function __construct(array $checks)
     {
         foreach ($checks as $check) {
-            if (!is_object($check)) {
-                throw new Exception(
-                    sprintf('Check must be an object, %s given.', gettype($check))
-                );
-            }
-
             if (!$check instanceof 'Kendu\HealthCheck\CheckInterface') {
                 throw new Exception(
                     sprintf('Check %s must implement Kendu\HealthCheck\CheckInterface.', get_class($check))
