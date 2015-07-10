@@ -21,6 +21,6 @@ abstract class Prototype
         }
 
         // @todo: compose a string
-        return null;
+        return '';
     }
 }
