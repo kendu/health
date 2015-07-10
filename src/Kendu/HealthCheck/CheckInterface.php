@@ -1,4 +1,4 @@
-<?php
+<?php namespace Kendu\HealthCheck;
 
 interface CheckInterface
 {

@@ -1,14 +1,17 @@
-<?php
+<?php namespace Kendu\HealthCheck\Status;
 
-namespace Kendu\HealthCheck\Status;
-
-class Success implements StatusInterface
+abstract class Prototype
 {
     protected $data;
 
     public function __construct($data)
     {
-        $this->data = $data;
+    	if (is_scalar($data)) {
+    		$this->data = ['messsage' => $data];
+    	} else {
+        	$this->data = $data;
+    	}
+
     }
 
     public function __toString()
@@ -18,6 +21,6 @@ class Success implements StatusInterface
         }
 
         // @todo: compose a string
-        return null;
+        return '';
     }
 }

@@ -1,4 +1,4 @@
-<?php
+<?php namespace Kendu\HealthCheck;
 
 class Response
 {
@@ -31,7 +31,8 @@ class Response
     public function send()
     {
         $this->setHeader('Content-Type', 'application/json');
-        echo json_encode($this->data, JSON_PRETTY_PRINT);
+
+        echo json_encode(array_map('strval', $this->data), JSON_PRETTY_PRINT);
         exit;
     }
 }
