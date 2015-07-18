@@ -1,9 +1,16 @@
 {
     "name": "kendu/health-check",
+    "license": "Apache-2.0",
     "description": "Project health check",
-    "authors": {
+    "authors": [{
         "name": "Kendu",
         "email": "team@kendu.si"
+    }],
+
+    "autoload": {
+        "psr-0": {
+            "Kendu\\HealthCheck": "src/"
+        }
     },
     "minimum-stability": "dev"
 }
