@@ -33,7 +33,9 @@ class HealthCheck
         array_walk($checks, [$this, 'addCheck']);
 
         // Add authenticator
-        $this->setAuth($auth);
+        if ($auth) {
+            $this->setAuth($auth);
+        }
     }
 
     public function addCheck(CheckInterface $check) {
