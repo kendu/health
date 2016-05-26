@@ -6,13 +6,13 @@ class Space implements \Kendu\HealthCheck\CheckInterface
 
     public function __construct(array $params)
     {
-        $this->params = [
+        $this->params = $params + [
             // 1GB as default minimum
             'min' => self::ONE_GB,
 
             // Check current directory by default...
             'dir' => __DIR__,
-        ] + $params;
+        ];
     }
 
     public function run()
