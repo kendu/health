@@ -20,7 +20,7 @@ class Space implements \Kendu\HealthCheck\CheckInterface
         $space = disk_free_space($this->params['dir']);
 
         if ($space >= $this->params['min']) {
-            return new \Kendu\HealthCheck\Status\Pass(["message" => "ok"]);
+            return new \Kendu\HealthCheck\Status\Pass();
         }
 
         return new \Kendu\HealthCheck\Status\Fail(
