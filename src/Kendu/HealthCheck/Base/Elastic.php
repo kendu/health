@@ -1,6 +1,6 @@
 <?php namespace Kendu\HealthCheck\Base;
 
-use \Kendu\HealthCheck\Status;
+use Kendu\HealthCheck\Status;
 
 class Elastic implements \Kendu\HealthCheck\CheckInterface
 {
